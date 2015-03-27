@@ -1,0 +1,166 @@
+body {
+	background: linear-gradient(#2E9797, black); /* NOT necessarily cross platform */
+	height:1600px;
+}
+
+div.tornadopic {
+	background-image:url("tornado1.jpg");
+	width:900px;
+	height:320px;
+	margin-left:auto;
+	margin-right:auto;
+	font-size:0px;
+}
+
+div.mainbg {
+	background:#FFFFFF;
+	width:900px;
+	height:700px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+}
+
+div.submitbg {
+	background:#FFFFFF;
+	width:900px;
+	height:700px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.contactbg {
+	background:#FFFFFF;
+	width:900px;
+	height:1200px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+div.login {
+	position:relative;
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	font-size:22px;
+}
+
+div.description {
+	width:900px;
+	margin-left:auto;
+	margin-right:auto;
+	color:#000000;
+	font-size:22px;
+}
+
+div.navigation {
+	width:900px;
+	height:38px;
+	margin-left:auto;
+	margin-right:auto;
+    background-color:#f2f2f2;
+	font-size:0px;
+}
+
+div.picleft {
+	width:250px;
+	float:left;
+	text-align:center;
+	margin:5px;
+}
+
+div.picright {
+	width:630px;
+	float:right;
+	margin:5px;
+}
+
+p {
+	margin: 10px;
+}
+
+.required {
+	color:red;
+	font-weight:bold;
+}
+
+.explanation {
+	color:blue;
+	font-size:16px;
+}
+
+table {
+	font-size:22px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+input[type="text"] {
+	width:200px;
+	height:30px;
+	font-size:22px;
+}
+
+input[type="submit"] {
+	font-size:22px;
+	width:200px;
+	height:50px;
+}
+
+fieldset {
+	border:none;
+}
+
+textarea {
+	height:100px;
+	width:200px;
+}
+
+button {
+	color:red;
+	background:yellow;
+	width:50%;
+	height:15%;
+	font-size:26px;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+/* Begin Navigation Bar Styling */
+   #nav {
+      width:855px;
+      margin-left:auto;
+	  margin-right:auto;
+	  padding:0px;
+   }
+   #nav li {
+      float: left;}
+   #nav li a {
+      display:block;
+      padding-left:40px;
+	  padding-right:40px;
+	  padding-top:5px;
+	  padding-bottom:5px;
+      text-decoration:none;
+      font-weight:bold;
+      color:#086F6F;
+	  font-size:22px;
+	}
+   #nav li a:hover {
+      color: #EB7E23;
+      background-color: #FFFFFF; }
+/* End navigation bar styling. */
+
+a:link{color:#EB2323;
+	text-decoration:none;
+	font-weight:bold;}
+a:visited{color:#EB2323;
+	text-decoration:none;
+	font-weight:bold;}
+a:active{color:#EB2323;
+	text-decoration:none;
+	font-weight:bold;}
+a:hover{color:#B90D0D;
+	text-decoration:none;
+	font-weight:bold;}

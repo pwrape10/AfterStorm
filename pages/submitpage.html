@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<!-- Human Computer Interaction: Group Project
+Group: Nicole Knox, Patrick Wrape, Travis Canales, Rondell Hames
+Milestone 1: Basic UI and form to enter information. 
+(Mar. 9th, 2015) -->
+
+<head>
+	<title>AfterStorm: Submit Emergency</title>
+	<link rel="StyleSheet" type="text/css" href="main.css">
+</head>
+
+<body><div class="tornadopic"></div>
+<div class="navigation">
+	<ul id="nav">
+		<li><a href="home.html">Home</a></li>
+		<li><a href="about.html">About</a></li>
+		<li><a href="submitpage.html">Report an Emergency</a></li>
+		<li><a href="contact.html">Contact</a></li>
+		<li><a href="login.html">Login</a></li>
+	</ul>
+</div>
+<div class="submitbg">
+<div class="description"><p>Welcome to AfterStorm!<br></p>
+<!-- http://www.w3schools.com/html/html_forms.asp 
+Useful for "GET" and "POST" stuff-->
+<p>If you are in an emergency situation, fill out and submit the form below and emergency personnel will be notified of your condition.</p>
+<form><fieldset>
+<table>
+  <tr>
+    <td><span class="required">*</span>Full Name:</td>
+    <td><input type="text" name="name" maxlength="50"></td>
+  </tr>
+  <tr>
+    <td><span class="required">*</span>Address:</td>
+    <td><input type="text" name="address" maxlength="40"></td> 
+  </tr>
+  <tr>
+    <td>Address Line 2:</td>
+    <td><input type="text" name="address2" maxlength="20"></td> 
+  </tr>
+  <tr>
+    <td>City:</td>
+    <td><input type="text" name="city" maxlength="20"></td> 
+  </tr>
+  <tr>
+	<td><span class="required">*</span>Zip Code:</td>
+	<td><input type="text" name="zip" maxlength="9"></td>
+  </tr>
+  <tr>
+    <td><span class="required">*</span>Email:<br>
+	OR<br>
+	<span class="required">*</span>Phone Number:</td>
+    <td><input type="text" name="email" maxlength="40"><br><br>
+	<input type="text" name="phone" maxlength="10"></td> 
+  </tr>
+  <tr>
+    <td><span class="required">*</span>Preferred contact method:</td>
+    <td><input type="radio" name="contact" value="email">Email
+	<br>
+	<input type="radio" name="contact" value="phone" checked>Phone</td> 
+  </tr>
+  <tr>
+    <td><span class="required">*</span>Are you in critical danger?</td>
+    <td><input type="radio" name="critical" value="yes">Yes
+	<br>
+	<input type="radio" name="critical" value="no" checked>No</td> 
+  </tr>
+  <tr>
+    <td>Additional Comments:<br>
+	<span class="explanation">Please indicate if you are with others and their medical conditions, <br>
+	if you have any medical allergies, and any other pertinent information.</span><br>
+	<br><span class="required" style="font-size:18px">fields marked with * are required</span></td>
+    <td><textarea rows="10" cols="50" maxlength="600" placeholder="600 characters available."></textarea></td> 
+  </tr>
+</table>
+<center><input type="submit" name="submitbutton"></center>
+</fieldset></form>
+
+</div></div>
+
+</body>
+</html>
