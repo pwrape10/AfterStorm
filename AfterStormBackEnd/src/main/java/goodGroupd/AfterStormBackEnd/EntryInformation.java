@@ -8,4 +8,18 @@ public class EntryInformation {
 	private String primaryName;
 	
 	private String address;
+	
+	private String city;
+	
+	private int zipCode;
+	
+	private int phoneNumber;
+	
+	private String email;
+	
+	private String groupSize;
+	
+	private boolean critical;
+	
+	private String comments;
 }
