@@ -6,38 +6,42 @@
 	<link rel="StyleSheet" type="text/css" href="main.css">
 </head>
 
-<body><div class="tornadopic"></div>
-<div class="navigation">
-	<ul id="nav">
-		<li><a href="home.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="submitpage.html">Report an Emergency</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="login.html">Login</a></li>
-	</ul>
-</div><br>
-<div class="mainbg"><br>
-<div class="login">Don't have an account yet? <a href="createaccount.html">Create an account.</a></div><br>
-<div class="description">
-Login to AfterStorm:<br>
-<form><fieldset>
-<table>
-  <tr>
-    <td>Username:</td>
-    <td><input type="text" name="username" maxlength="20"></td>
-  </tr>
-  <tr>
-    <td>Password:</td>
-    <td><input type="text" name="password" maxlength="20"></td> 
-  </tr>
-</table>
-<br><input type="submit" name="loginbutton">
-</fieldset></form>
+<body>
+	<div class="tornadopic">
+		<h1>About AfterStorm</h1>
+	</div>
 
-</div>
-</div>
-
-<!-- <script src="afterstormjscript.js"></script> -->
-
+	<div class="navigation">
+		<div id="nav">
+			<ul>
+			<li><a href="home.html" class="design-name">Home</a></li>	
+			<li><a href="about.html" class="design-name">About</a></li>
+			<li><a href="preemergency.html" class="design-name">Before the Emergency</a></li>
+			<li><a href="submitpage.html" class="design-name">After the Emergency</a></li>
+			<li><a href="contact.html" class="design-name">Contact</a></li>
+			<li><a href="login.html" class="design-name">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="loginbg">
+		<div class="login">
+			<h2>Login to AfterStorm</h2>
+			<span class="explanation">
+			<p>If the emergency has not taken place yet, <a href="preemergency.html">submit your information here.</a><br>
+			If your situation is critical, <a href="submitpage.html">submit an emergency report here.</a></p></span>
+			<br>
+			<p>If you submitted information before the storm, you can update it here.</p>
+			<form><fieldset>
+				<table>
+				<tr>
+					<td>Phone Number:</td>
+					<td><input type="text" name="logininfo" maxlength="15"></td> 
+				</tr>
+				</table>
+			<p><input type="submit" name="loginbutton"></p>
+			</fieldset></form>
+		</div>
+	</div>
 </body>
 </html>

@@ -7,7 +7,7 @@ Milestone 1: Basic UI and form to enter information.
 (Mar. 9th, 2015) -->
 
 <head>
-	<title>AfterStorm: Submit Emergency</title>
+	<title>AfterStorm: Pre-Emergency Form</title>
 	<link rel="StyleSheet" type="text/css" href="main.css">
 </head>
 
@@ -31,10 +31,11 @@ Milestone 1: Basic UI and form to enter information.
 	
 	<div class="loginbg">
 		<div class="login">
-			<h2>Submit Post-Emergency Form</h2>
+			<h2>Submit Pre-Emergency Form</h2>
 		<!-- http://www.w3schools.com/html/html_forms.asp 
 		Useful for "GET" and "POST" stuff-->
-		<p>If you are in an emergency situation, fill out and submit the form below and emergency personnel will be notified of your condition.</p>
+		<p>If an emergency situation is about to occur, please enter your current status into this form.<br>
+		Then, after the emergency has taken place, please navigate to the 'log-in' tab and update your information.</p>
 		<form><fieldset>
 			<table>
 			  <tr>
@@ -56,12 +57,6 @@ Milestone 1: Basic UI and form to enter information.
 			  <tr>
 				<td><span class="required">*</span>Phone Number:</td>
 				<td><input type="text" name="phone" maxlength="10"></td> 
-			  </tr>
-			  <tr>
-				<td><span class="required">*</span>Are you in critical danger?</td>
-				<td><input type="radio" name="critical" value="yes">Yes
-				<br>
-				<input type="radio" name="critical" value="no" checked>No</td> 
 			  </tr>
 			  <tr>
 				<td>Additional Comments:<br>

@@ -3,8 +3,8 @@
 
 <!-- Human Computer Interaction: Group Project
 Group: Nicole Knox, Patrick Wrape, Travis Canales, Rondell Hames
-Milestone 1: Basic UI and form to enter information. 
-(Mar. 9th, 2015) -->
+Milestone 3: Everything!
+(Mar. 31st, 2015) -->
 
 <!-- Notes to the uninformed:
 	HTML defines the content of web pages.
@@ -17,29 +17,50 @@ Milestone 1: Basic UI and form to enter information.
 	<link rel="StyleSheet" type="text/css" href="main.css">
 </head>
 
-<body><div class="tornadopic"></div>
-<div class="navigation">
-	<ul id="nav">
-		<li><a href="home.html">Home</a></li>
-		<li><a href="about.html">About</a></li>
-		<li><a href="submitpage.html">Report an Emergency</a></li>
-		<li><a href="contact.html">Contact</a></li>
-		<li><a href="login.html">Login</a></li>
-	</ul>
-</div><br>
-<div class="mainbg"><br>
-<div class="login"><a href="createaccount.html">CREATE ACCOUNT</a> &bull; <a href="login.html">SIGN IN</a></div><br>
-<div class="description">Welcome to AfterStorm!<br><br>
-<button type="button" onclick="location.href='submitpage.html'"><strong>IN AN EMERGENCY, CLICK HERE</strong></button>
-<br><br>
-This is a project for Human Computer Interaction (C S 3053) at the University of Oklahoma, taught by Nic Grounds.<br>
-This website should work on the Google Chrome browser and on its mobile equivalent.<br>
-In order to create a website that is compatible with older computers and cell phones, the layout of the site is very simple and uses as few elements as possible.<br>
-If you have any questions, please navigate to the 'Contact' page on the navigation bar above to ask the staff!<br>
-<strong>Thank you for visiting AfterStorm!</strong></div>
-</div>
+<body>
+	<div class="tornadopic">
+		<h1>AfterStorm</h1>
+	</div>
 
-<!-- <script src="afterstormjscript.js"></script> -->
+	<div class="navigation">
+		<div id="nav">
+			<ul>
+			<li><a href="home.html" class="design-name">Home</a></li>	
+			<li><a href="about.html" class="design-name">About</a></li>
+			<li><a href="preemergency.html" class="design-name">Before the Emergency</a></li>
+			<li><a href="submitpage.html" class="design-name">After the Emergency</a></li>
+			<li><a href="contact.html" class="design-name">Contact</a></li>
+			<li><a href="login.html" class="design-name">Login</a></li>
+			</ul>
+		</div>
+	</div>
 
+	<div class="description">
+		<div class="leftdesc">
+			<p><button type="button" onclick="location.href='submitpage.html'"><strong>IN AN EMERGENCY, CLICK HERE</strong></button></p>
+			<h2>Welcome to AfterStorm!</h2>
+			<p>This is a project for OU's Human Computer Interaction (C S 3053), taught by Nic Grounds.<br>
+			If you have any questions, please navigate to the 'Contact' page on the navigation bar above to ask the staff!<br>
+			<strong>Thank you for visiting AfterStorm!</strong></p>
+		</div>
+		<div class="rightdesc"></div>
+	</div>
+	
+	<div class="infobg">
+		<div class="info">
+			<h2>How do I use AfterStorm?</h2>
+			<p>If you are expecting an emergency situation to occur soon, please do the following:</p>
+			<ol>
+				<li><strong>Take necessary precautions</strong> to protect yourself from the oncoming emergency.</li>
+				<li>Navigate to the<strong> 'Before the Emergency' </strong>tab.</li>
+				<li><strong>Fill out your information</strong>, ensuring its correctness.</li>
+				<li><strong>After the emergency</strong>, if you are able, navigate to the <strong>'After the Storm'</strong> tab.</li>
+				<li>Using the same phone number, <strong>update your status</strong>. An emergency authority will be in contact.</li>
+				<li>If you cannot update your status after the emergency, an emergency authority will contact you <strong>using your phone number.</strong></li>
+			</ol>
+		</div>
+	</div>
+	
 </body>
+
 </html>

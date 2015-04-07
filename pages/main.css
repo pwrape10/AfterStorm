@@ -1,83 +1,181 @@
 body {
-	background: linear-gradient(#2E9797, black); /* NOT necessarily cross platform */
-	height:1600px;
+	height:1100px;
+	font-size: 0px;
+	font-family: Calibri, Helvetica, Arial, sans-serif;
 }
 
 div.tornadopic {
-	background-image:url("tornado1.jpg");
-	width:900px;
-	height:320px;
-	margin-left:auto;
-	margin-right:auto;
-	font-size:0px;
+	background: url("assets/tornado1.jpg") no-repeat center, linear-gradient(white, #2E9797);
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 320px;
+	font-size: 0px;
 }
 
-div.mainbg {
-	background:#FFFFFF;
-	width:900px;
-	height:700px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
+h1 {
+	font-family: Lucida, Georgia, serif;
+	font-size: 90px;
+	font-weight: 500;
+	color: yellow;
 }
 
-div.submitbg {
-	background:#FFFFFF;
-	width:900px;
-	height:700px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-div.contactbg {
-	background:#FFFFFF;
-	width:900px;
-	height:1200px;
-	margin-left:auto;
-	margin-right:auto;
-}
-
-div.login {
-	position:relative;
-	width:900px;
-	margin-left:auto;
-	margin-right:auto;
-	text-align:center;
-	font-size:22px;
-}
-
-div.description {
-	width:900px;
-	margin-left:auto;
-	margin-right:auto;
-	color:#000000;
-	font-size:22px;
+h2 {
+	font-family: Lucida, Georgia, serif;
+	font-size: 40px;
+	font-weight: 500;
+	color: #086F6F;
+	margin: 0;
+	padding: 10px;
 }
 
 div.navigation {
-	width:900px;
-	height:38px;
-	margin-left:auto;
-	margin-right:auto;
-    background-color:#f2f2f2;
+	background: #086F6F;
+	display: block;
+	text-align: center;
+	width: 100%;
+	height: 40px;
+	border-top: 2px solid yellow;
+	border-bottom: 2px solid yellow;
+}
+
+#nav {
+	width:100%;
+	max-width: 900;
+	margin-left: auto;
+	margin-right: auto;
+}
+  
+#nav li {
+	display: inline-block;
+}
+  
+#nav li a {
+	display:block;
+	padding-right:35px;
+	padding-top:5px;
+	padding-bottom:5px;
+	text-decoration:none;
+	font-weight:bold;
+	font-size:22px; 
+}
+
+div.description {
+	width:100%;
 	font-size:0px;
+	display: block;
 }
 
-div.picleft {
-	width:250px;
+div.leftdesc {
+	background:#B6E8E8;
 	float:left;
-	text-align:center;
-	margin:5px;
+	text-align: center;
+	width: 50%;
+	height: 400px;
+	font-size:22px;
 }
 
-div.picright {
-	width:630px;
+div.rightdesc {
+	background:url("assets/tornado4.jpg") no-repeat center, #7FD1D1;
+	background-size: auto 100%; /*width height*/
 	float:right;
-	margin:5px;
+	text-align: center;
+	width: 50%;
+	height: 400px;
+	font-size: 0px;
+}
+
+div.infobg {
+	background: url("assets/tornado3.jpg") no-repeat center, linear-gradient(white, #2E9797);
+	background-size: auto 150%; /*width height*/
+	display: block;
+	text-align: center;
+	width: 100%;
+	margin-top:400px;
+	height: 500px;
+	font-size: 0px;
+	border-top: 2px solid yellow;
+	padding: 2% 0;
+}
+
+div.info {
+	background: rgba(255,255,255,0.7);
+	display: block;
+	text-align: center;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 425px;
+	font-size: 22px;
+}
+
+div.aboutinfobg {
+	background: url("assets/mooretornado.jpg") no-repeat center, #2E9797;
+	background-size: auto 100%; /*width height*/
+	display: block;
+	width: 100%;
+	height: 800px;
+	font-size: 0px;
+	padding: 2% 0;
+}
+
+div.aboutinfo {
+	background: rgba(255,255,255,0.7);
+	display: block;
+	text-align: center;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 90%;
+	font-size: 22px;
+}
+
+div.loginbg {
+	background: url("assets/tornado2.jpg") no-repeat center, #2E9797;
+	background-size: auto 100%; /*width height*/
+	display: block;
+	width: 100%;
+	height: 800px;
+	font-size: 0px;
+	padding: 2% 0;
+}
+
+div.login {
+	background: rgba(255,255,255,0.7);
+	display: block;
+	text-align: center;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 90%;
+	font-size: 22px;
+}
+
+div.contactbg {
+	background: url("assets/tornado4.jpg") no-repeat center, #2E9797;
+	background-size: auto 100%; /*width height*/
+	display: block;
+	width: 100%;
+	height: 1300px;
+	font-size: 0px;
+	padding: 2% 0;
+}
+
+div.contact {
+	background: rgba(255,255,255,0.7);
+	display: block;
+	text-align: center;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 90%;
+	font-size: 22px;
 }
 
 p {
-	margin: 10px;
+	margin: 15px;
+	text-align: center;
+	font-size: 22px;
 }
 
 .required {
@@ -120,38 +218,39 @@ textarea {
 button {
 	color:red;
 	background:yellow;
-	width:50%;
-	height:15%;
+	width:75%;
+	height:80px;
 	font-size:26px;
 	margin-left:auto;
 	margin-right:auto;
 }
 
-/* Begin Navigation Bar Styling */
-   #nav {
-      width:855px;
-      margin-left:auto;
-	  margin-right:auto;
-	  padding:0px;
-   }
-   #nav li {
-      float: left;}
-   #nav li a {
-      display:block;
-      padding-left:40px;
-	  padding-right:40px;
-	  padding-top:5px;
-	  padding-bottom:5px;
-      text-decoration:none;
-      font-weight:bold;
-      color:#086F6F;
-	  font-size:22px;
-	}
-   #nav li a:hover {
-      color: #EB7E23;
-      background-color: #FFFFFF; }
-/* End navigation bar styling. */
+div.picleft {
+	width:250px;
+	float:left;
+	text-align:center;
+	margin:5px;
+}
 
+div.picright {
+	width:500px;
+	float:right;
+	margin:5px;
+}
+
+div.navigation a:link{color:yellow;
+	text-decoration:none;
+	font-weight:bold;}
+div.navigation a:visited{color:yellow;
+	text-decoration:none;
+	font-weight:bold;}
+div.navigation a:active{color:yellow;
+	text-decoration:none;
+	font-weight:bold;}
+div.navigation a:hover{color:#EB7E23;
+	text-decoration:none;
+	font-weight:bold;}
+	
 a:link{color:#EB2323;
 	text-decoration:none;
 	font-weight:bold;}
