@@ -32,16 +32,22 @@
 			If your situation is critical, <a href="submitpage.html">submit an emergency report here.</a></p></span>
 			<br>
 			<p>If you submitted information before the storm, you can update it here.</p>
-			<form><fieldset>
+			<form onsubmit="getData()">
 				<table>
 				<tr>
 					<td>Phone Number:</td>
-					<td><input type="text" name="logininfo" maxlength="15"></td> 
+					<td><input type="text" name="logininfo" maxlength="15" pattern="[0-9]{10}"
+					title="Please input your 10 digit phone number starting with the area code" required></td> 
 				</tr>
 				</table>
 			<p><input type="submit" name="loginbutton"></p>
-			</fieldset></form>
+			</form>
 		</div>
 	</div>
 </body>
+<script>
+	function getData(){
+		alert("\"Getting and parsing data.\"");
+	}
+</script>
 </html>
