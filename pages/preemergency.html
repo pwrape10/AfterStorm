@@ -46,11 +46,12 @@ Milestone 1: Basic UI and form to enter information.
 			  <tr>
 				<td><span class="required">*</span>Address:</td>
 				<td><input type="text" name="address" id ="address" maxlength="40" color="black"
-				pattern="[A-Za-z0-9 ]{1,40}" title="Invalid Input, try again." required></td> 
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again." required></td> 
 			  </tr>
 			  <tr>
 				<td>Address Line 2:</td>
-				<td><input type="text" name="address2" id="address2" maxlength="20" color="black"></td> 
+				<td><input type="text" name="address2" id="address2" maxlength="20" color="black"
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again."></td> 
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Zip Code:</td>
