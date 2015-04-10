@@ -35,27 +35,32 @@ Milestone 1: Basic UI and form to enter information.
 		<!-- http://www.w3schools.com/html/html_forms.asp 
 		Useful for "GET" and "POST" stuff-->
 		<p>If you are in an emergency situation, fill out and submit the form below and emergency personnel will be notified of your condition.</p>
-		<form><fieldset>
+		<form onsubmit="sendData()">
 			<table>
 			  <tr>
 				<td><span class="required">*</span>Full Name:</td>
-				<td><input type="text" name="name" maxlength="50"></td>
+				<td><input type="text" name="name" maxlength="50" pattern="[A-Za-z ]{2,50}"
+				title="Invalid Input, try again." required></td>
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Address:</td>
-				<td><input type="text" name="address" maxlength="40"></td> 
+				<td><input type="text" name="address" maxlength="40"
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again." required></td> 
 			  </tr>
 			  <tr>
 				<td>Address Line 2:</td>
-				<td><input type="text" name="address2" maxlength="20"></td> 
+				<td><input type="text" name="address2" maxlength="20"
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again." ></td> 
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Zip Code:</td>
-				<td><input type="text" name="zip" maxlength="9"></td>
+				<td><input type="text" name="zip" maxlength="9" pattern="[0-9]{5}"
+				title="Please input your 5 digit zip code" required></td>
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Phone Number:</td>
-				<td><input type="text" name="phone" maxlength="10"></td> 
+				<td><input type="text" name="phone" maxlength="10"pattern="[0-9]{10}"
+				title="Please input your 10 digit phone number starting with the area code" required></td> 
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Are you in critical danger?</td>
@@ -72,8 +77,13 @@ Milestone 1: Basic UI and form to enter information.
 			  </tr>
 			</table>
 		<center><input type="submit" name="submitbutton"></center>
-		</fieldset></form>
+		</form>
 		</div>
 	</div>
 </body>
+<script>
+	function sendData(){
+		alert("\"Sending Data\"");
+	}
+</script>
 </html>
