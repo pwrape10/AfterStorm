@@ -1,6 +1,8 @@
 package goodGroupd.AfterStormBackEnd;
 
 import org.mongodb.morphia.annotations.Entity;
+import org.mongodb.morphia.annotations.Id;
+
 import java.util.ArrayList;
 
 @Entity(noClassnameStored=true)
@@ -12,6 +14,7 @@ public class EntryInformation {
 		
 	private int zipCode;
 	
+	@Id
 	private String phoneNumber;
 		
 	private ArrayList<String> otherPeople;

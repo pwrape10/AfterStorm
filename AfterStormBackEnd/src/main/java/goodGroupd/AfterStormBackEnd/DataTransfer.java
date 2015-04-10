@@ -1,6 +1,6 @@
 package goodGroupd.AfterStormBackEnd;
 import java.net.UnknownHostException;
-
+import java.util.ArrayList;
 import org.mongodb.morphia.*;
 
 import com.mongodb.MongoClient;
@@ -19,7 +19,15 @@ public static void addInformation(EntryInformation newEntry){
 	
 }
 
-
+public static EntryInformation findPerson(String phoneNumber){
+	
+	Datastore dstore = getDatastore();
+	
+	EntryInformation targPerson = dstore.get(EntryInformation.class, phoneNumber);
+	
+	return targPerson;
+	
+}
 
 
 
