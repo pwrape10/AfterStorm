@@ -36,7 +36,7 @@
 				<table>
 				<tr>
 					<td>Phone Number:</td>
-					<td><input type="text" name="logininfo" maxlength="15" pattern="[0-9]{10}"
+					<td><input type="text" name="logininfo" maxlength="15" pattern="[0-9]{10}" id ="phone"
 					title="Please input your 10 digit phone number starting with the area code" required></td> 
 				</tr>
 				</table>
@@ -46,8 +46,11 @@
 	</div>
 </body>
 <script>
+	var phoneV, message;
 	function getData(){
-		alert("\"Getting and parsing data.\"");
+		phoneV = document.getElementById("phone").value;
+		message = "phone=" + phoneV;
+		alert(message);
 	}
 </script>
 </html>
