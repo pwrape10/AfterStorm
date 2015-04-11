@@ -36,27 +36,32 @@ Milestone 1: Basic UI and form to enter information.
 		Useful for "GET" and "POST" stuff-->
 		<p>If an emergency situation is about to occur, please enter your current status into this form.<br>
 		Then, after the emergency has taken place, please navigate to the 'log-in' tab and update your information.</p>
-		<form><fieldset>
+		<form onsubmit="sendData()">
 			<table>
 			  <tr>
 				<td><span class="required">*</span>Full Name:</td>
-				<td><input type="text" name="name" id="name" maxlength="50" color="black"></td>
+				<td><input type="text" name="name" id="name" maxlength="50" pattern="[A-Za-z ]{2,40}"
+				title="Invalid Input, try again." required></td>
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Address:</td>
-				<td><input type="text" name="address" id ="address" maxlength="40" color="black"></td> 
+				<td><input type="text" name="address" id ="address" maxlength="40" color="black"
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again." required></td> 
 			  </tr>
 			  <tr>
 				<td>Address Line 2:</td>
-				<td><input type="text" name="address2" id="address2" maxlength="20" color="black"></td> 
+				<td><input type="text" name="address2" id="address2" maxlength="20" color="black"
+				pattern="[A-Za-z0-9 .-]{1,40}" title="Invalid Input, try again."></td> 
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Zip Code:</td>
-				<td><input type="text" name="zip" id="zip" maxlength="9" color="black"></td>
+				<td><input type="text" name="zip" id="zip" maxlength="9" color="black" pattern="[0-9]{5}"
+				title="Please input your 5 digit zip code" required></td>
 			  </tr>
 			  <tr>
 				<td><span class="required">*</span>Phone Number:</td>
-				<td><input type="text" name="phone" id="phone" maxlength="10" color="black"></td> 
+				<td><input type="text" name="phone" id="phone" maxlength="10" color="black" pattern="[0-9]{10}"
+				title="Please input your 10 digit phone number starting with the area code" required></td> 
 			  </tr>
 			  <tr>
 				<td>Additional Comments:<br>
@@ -66,42 +71,15 @@ Milestone 1: Basic UI and form to enter information.
 				<td><textarea rows="10" cols="50" maxlength="600" placeholder="600 characters available."></textarea></td> 
 			  </tr>
 			</table>
-		<center><input type="submit" name="submitbutton" onclick="validate"></center>
-		</fieldset></form>
+		<center><input type="submit" name="submitbutton"></center>
+		</form>
 		</div>
 	</div>
 </body>
 
 <script>
-	function validate(){
-		var nameV, phoneV, phoneS, zipV, zipS, addr1V, addr2V, comm;
-		nameV = document.getElementById("name").value;
-		phoneV = document.getElementById("phone").value;
-		phoneS=phoneV.length;
-		zipV = document.getElementById("zip").value;
-		zipS = zipV.length;
-		addr1V = document.getElementById("address").value;
-		addr2V = document.getElementById("address2").value;
-		
-		if(!(/^[A-Za-z ]+$/.test(nameV))){
-			nameV.fontcolor(red);
-		}
-		
-		if((!(/^[1234567890]+$/.test(phoneV)))||(phoneS==10)){
-			phoneV.fontcolor(red);
-		}
-		
-		if((!(/^[1234567890]+$/.test(zipV)))||(zipS==5)){
-			zipV.fontcolor(red);
-		}
-		
-		if(!(/^[A-Za-z1234567890.'-]+$/.test(addr1V))){
-			addr1V.fontcolor(red);
-		}
-		
-		if((!(/^[A-Za-z1234567890.'-]+$/.test(addr1V)))&&!(addr1V==""||addr1V==null)){
-			addr1V.fontcolor(red);
-		}
+	function sendData(){
+		alert("\"Sending Data\"");
 	}
 </script>
 
