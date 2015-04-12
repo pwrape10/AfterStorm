@@ -19,7 +19,7 @@ Milestone 1: Basic UI and form to enter information.
 	<div class="navigation">
 		<div id="nav">
 			<ul>
-			<li><a href="home.html" class="design-name">Home</a></li>	
+			<li><a href="index.html" class="design-name">Home</a></li>	
 			<li><a href="about.html" class="design-name">About</a></li>
 			<li><a href="preemergency.html" class="design-name">Before the Emergency</a></li>
 			<li><a href="submitpage.html" class="design-name">After the Emergency</a></li>
@@ -90,6 +90,16 @@ Milestone 1: Basic UI and form to enter information.
 		message = ("name=" + nameV + "&address=" + addr1 + "&address2=" + addr2
 			+ "&zip=" + zipV + "&phone=" + phoneV + "&comments=" + commV);
 		alert(message);
+	}
+	
+	window.onload = function (){
+		var params = window.location.hash.substr(1);
+		params.toString();
+		document.getElementById("comments").value = params;
+		var p = params.split('=');
+		console.log(p[0]);
+		console.log(p[1]);
+		document.getElementById(p[0]).value = p[1];
 	}
 </script>
 
