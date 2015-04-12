@@ -89,7 +89,20 @@ Milestone 1: Basic UI and form to enter information.
 		commV = document.getElementById("comments").value;
 		message = ("name=" + nameV + "&address=" + addr1 + "&address2=" + addr2
 			+ "&zip=" + zipV + "&phone=" + phoneV + "&comments=" + commV);
-		alert(message);
+		$.ajax({
+			url: "192.168.1.5:8080",
+			data: { message },
+			type: "POST",
+			dataType: "json",
+			success: function (response){
+				console.log(response);
+			}
+			error: function(xhr, status, errorThrown){
+				alert("Add Failed");
+				console.log("Error: " + errorThrown);
+				console.log("Status: " + status);
+			}
+		});
 	}
 	
 	window.onload = function (){
