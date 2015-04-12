@@ -26,7 +26,7 @@ public class EntryInformation {
 
 	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments ){
 		
-		this.primaryName = name;
+		this.setPrimaryName(name);
 		this.address = address;
 		this.zipCode = zipCode;
 		this.phoneNumber = phoneNumber;
@@ -36,7 +36,7 @@ public class EntryInformation {
 	
 	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments, ArrayList<String> additionalPeople ){
 		
-		this.primaryName = name;
+		this.setPrimaryName(name);
 		this.address = address;
 		this.zipCode = zipCode;
 		this.phoneNumber = phoneNumber;
@@ -46,5 +46,13 @@ public class EntryInformation {
 	
 	public void isCritical(boolean criticalStatus){
 		this.critical = criticalStatus;
+	}
+
+	public String getPrimaryName() {
+		return primaryName;
+	}
+
+	public void setPrimaryName(String primaryName) {
+		this.primaryName = primaryName;
 	}
 }
