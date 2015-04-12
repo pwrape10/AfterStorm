@@ -68,7 +68,7 @@ Milestone 1: Basic UI and form to enter information.
 				<span class="explanation">Please indicate if you are with others and their medical conditions, <br>
 				if you have any medical allergies, and any other pertinent information.</span><br>
 				<br><span class="required" style="font-size:18px">fields marked with * are required</span></td>
-				<td><textarea rows="10" cols="50" maxlength="600" placeholder="600 characters available."></textarea></td> 
+				<td><textarea rows="10" cols="50" maxlength="600" placeholder="600 characters available." id="comments"></textarea></td> 
 			  </tr>
 			</table>
 		<center><input type="submit" name="submitbutton"></center>
@@ -78,8 +78,18 @@ Milestone 1: Basic UI and form to enter information.
 </body>
 
 <script>
+	var nameV, addr1, addr2, phoneV, zipV, commV, message;
+	
 	function sendData(){
-		alert("\"Sending Data\"");
+		nameV = document.getElementById("name").value;
+		addr1 = document.getElementById("address").value;
+		addr2 = document.getElementById("address2").value;
+		zipV = document.getElementById("zip").value;
+		phoneV = document.getElementById("phone").value;
+		commV = document.getElementById("comments").value;
+		message = ("name=" + nameV + "&address=" + addr1 + "&address2=" + addr2
+			+ "&zip=" + zipV + "&phone=" + phoneV + "&comments=" + commV);
+		alert(message);
 	}
 </script>
 
