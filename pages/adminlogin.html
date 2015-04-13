@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+	<title>AfterStorm: Admin Login</title>
+	<link rel="StyleSheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<div class="tornadopic">
+		<h1>AfterStorm</h1>
+	</div>
+
+	<div class="navigation">
+		<div id="nav">
+			<ul>
+			<li><a href="index.html" class="design-name">Home</a></li>	
+			<li><a href="about.html" class="design-name">About</a></li>
+			<li><a href="preemergency.html" class="design-name">Before the Emergency</a></li>
+			<li><a href="submitpage.html" class="design-name">After the Emergency</a></li>
+			<li><a href="contact.html" class="design-name">Contact</a></li>
+			<li><a href="login.html" class="design-name">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="loginbg">
+		<div class="login">
+			<h2>AfterStorm Authorized Login</h2>
+			<span class="explanation">
+			<p>If you are not an administrator and a storm has not taken place yet, <a href="preemergency.html">submit your information here.</a><br>
+			If you are not an administrator and your situation is critical, <a href="submitpage.html">submit an emergency report here.</a></p></span>
+			<br>
+			<p>If you have an authorized account, enter your user ID below.</p>
+			<form onsubmit="getData()">
+				<table>
+				<tr>
+					<td>Phone Number:</td>
+					<td><input type="text" name="logininfo" maxlength="15" pattern="[0-9]{10}" id ="phone"
+					title="Please input your user ID" required></td> 
+				</tr>
+				</table>
+			<p><input type="submit" name="loginbutton"></p>
+			</form>
+		</div>
+	</div>
+</body>
+<script>
+	var phoneV;
+	function redirect(){
+		phoneV = document.getElementById("phone").value;
+		if( phoneV == "1111111111"){
+			//var response = server response string
+			window.location.replace("submitpage.html#phone="+phoneV+"&");
+			return false;
+		}
+		else{
+			window.location.replace("preemergency.html#phone="+phoneV);
+			return false;
+		}
+	}
+</script>
+</html>
