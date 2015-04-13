@@ -8,7 +8,7 @@
 
 <body>
 	<div class="tornadopic">
-		<h1>User Status Information</h1>
+		<h1>AfterStorm</h1>
 	</div>
 
 	<div class="navigation">
@@ -26,7 +26,17 @@
 	
 	<div class="loginbg">
 		<div class="login">
-			<h2>Sort by:</h2> <!-- make a drop down list and a search box, and submit -->
+			<h2>Sort by: </h2> 
+			<form>
+				<select>
+					<option value="zip">Zip Code</option>
+					<option value="crit">Critical Y/N</option>
+					<option value="phone">Phone Number</option>
+				</select>
+				<input type="text" name="searchparams" id ="searchparams" maxlength="10">
+			</form>
+			
+<!-- make a drop down list and a search box, and submit -->
 				<table>
 					<tr>
 						<td></td>
