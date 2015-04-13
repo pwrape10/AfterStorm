@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+	<title>AfterStorm: User Status</title>
+	<link rel="StyleSheet" type="text/css" href="main.css">
+</head>
+
+<body>
+	<div class="tornadopic">
+		<h1>User Status Information</h1>
+	</div>
+
+	<div class="navigation">
+		<div id="nav">
+			<ul>
+			<li><a href="index.html" class="design-name">Home</a></li>	
+			<li><a href="about.html" class="design-name">About</a></li>
+			<li><a href="preemergency.html" class="design-name">Before the Emergency</a></li>
+			<li><a href="submitpage.html" class="design-name">After the Emergency</a></li>
+			<li><a href="contact.html" class="design-name">Contact</a></li>
+			<li><a href="login.html" class="design-name">Login</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="loginbg">
+		<div class="login">
+			<h2>Sort by:</h2> <!-- make a drop down list and a search box, and submit -->
+				<table>
+					<tr>
+						<td></td>
+					</tr>
+				</table>
+		</div>
+	</div>
+</body>
+<script>
+	var phoneV;
+	function redirect(){
+		phoneV = document.getElementById("phone").value;
+		if( phoneV == "1111111111"){
+			//var response = server response string
+			window.location.replace("submitpage.html#phone="+phoneV+"&");
+			return false;
+		}
+		else{
+			window.location.replace("preemergency.html#phone="+phoneV);
+			return false;
+		}
+	}
+</script>
+</html>
