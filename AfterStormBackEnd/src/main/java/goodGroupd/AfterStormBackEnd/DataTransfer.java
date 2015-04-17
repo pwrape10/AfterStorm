@@ -104,7 +104,7 @@ public static Datastore getDatastore(){
 	MongoClient monClient = null;
 	
 	try {
-		monClient = new MongoClient("localhost", 27017);
+		monClient = new MongoClient("192.168.1.7", 27017);
 	} catch (UnknownHostException e) {
 		System.out.println("Could not connect to DB");
 		e.printStackTrace();
