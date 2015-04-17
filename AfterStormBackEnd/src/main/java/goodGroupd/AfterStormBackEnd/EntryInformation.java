@@ -23,16 +23,9 @@ public class EntryInformation {
 	
 	private String comments;
 	
-
-	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments ){
-		
-		this.setPrimaryName(name);
-		this.address = address;
-		this.zipCode = zipCode;
-		this.phoneNumber = phoneNumber;
-		this.comments = comments;
-		
-	}
+	private boolean checkedIn;
+	
+	public EntryInformation(){}
 	
 	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments, ArrayList<String> additionalPeople ){
 		
@@ -43,9 +36,18 @@ public class EntryInformation {
 		this.comments = comments;
 		this.otherPeople = additionalPeople;
 	}
+
+	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments){
+		
+		new EntryInformation(name, address, zipCode, phoneNumber, comments, new ArrayList<String>());
+		
+	}
+	
+
 	
 	public void isCritical(boolean criticalStatus){
 		this.critical = criticalStatus;
+		this.checkedIn = true;
 	}
 
 	public String getPrimaryName() {
@@ -55,4 +57,5 @@ public class EntryInformation {
 	public void setPrimaryName(String primaryName) {
 		this.primaryName = primaryName;
 	}
+	
 }
