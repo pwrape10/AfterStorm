@@ -11,9 +11,11 @@ import com.mongodb.MongoClient;
 
 public class DataTransfer{
 	
-	public DataTransfer(){
-		
-	}
+public DataTransfer(){
+	
+	Morphia morphia = new Morphia();
+	morphia.map(EntryInformation.class);
+}
 	
 public static void addInformation(EntryInformation newEntry){
 	
@@ -91,6 +93,14 @@ public static ArrayList<EntryInformation> getNonOrCrit(){
 	return targList;
 }
 
+public static void update(EntryInformation updatedEntry){
+	
+	Datastore dstore = getDatastore();
+	
+	dstore.save(updatedEntry);
+	
+	closeMongo(dstore);
+}
 
 public static void closeMongo(Datastore dstore){
 	
