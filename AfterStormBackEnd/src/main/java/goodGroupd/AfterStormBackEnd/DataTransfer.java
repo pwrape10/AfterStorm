@@ -4,6 +4,7 @@ import java.net.UnknownHostException;
 import org.mongodb.morphia.*;
 import org.mongodb.morphia.query.Criteria;
 import org.mongodb.morphia.query.Query;
+import org.mongodb.morphia.query.UpdateOperations;
 
 import java.util.ArrayList;
 
@@ -58,7 +59,7 @@ public static ArrayList<EntryInformation> getCritical(){
 	
 	Datastore dstore = getDatastore();
 	
-	ArrayList<EntryInformation> critList = new ArrayList(dstore.find(EntryInformation.class, "critical", true).asList());
+	ArrayList<EntryInformation> critList = new ArrayList<EntryInformation>(dstore.find(EntryInformation.class, "critical", true).asList());
 	
 	closeMongo(dstore);
 	
@@ -69,7 +70,7 @@ public static ArrayList<EntryInformation> getNonChecks(){
 	
 	Datastore dstore = getDatastore();
 	
-	ArrayList<EntryInformation> checkList = new ArrayList(dstore.find(EntryInformation.class, "checkedIn", false).asList());
+	ArrayList<EntryInformation> checkList = new ArrayList<EntryInformation>(dstore.find(EntryInformation.class, "checkedIn", false).asList());
 	
 	closeMongo(dstore);
 	
@@ -80,7 +81,7 @@ public static ArrayList<EntryInformation> getNonOrCrit(){
 	
 	Datastore dstore = getDatastore();
 	
-	Query targQuery = dstore.createQuery(EntryInformation.class);
+	Query<EntryInformation> targQuery = dstore.createQuery(EntryInformation.class);
 			
 	targQuery.or((Criteria)targQuery.criteria("checkedIn").equal(false),
 				((Criteria)targQuery.criteria("critical").equal(true))
@@ -126,6 +127,25 @@ public static Datastore getDatastore(){
 	
 	return dstore;
 	
+}
+
+public static void resetEventOccurence(){
+	
+	Datastore dstore = getDatastore();
+	
+	Query<EntryInformation> targQuery = dstore.createQuery(EntryInformation.class);
+	
+	targQuery.or(
+
+			(Criteria)targQuery.criteria("critical").equal(true),
+			(Criteria)targQuery.criteria("checkedIn").equal(true)
+			);
+	
+	UpdateOperations<EntryInformation> ops = dstore.createUpdateOperations(EntryInformation.class).set("critical", false).set("checkedIn", false);
+	
+	dstore.update(targQuery, ops);
+	
+	closeMongo(dstore);
 }
 
 

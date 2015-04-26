@@ -29,7 +29,7 @@ public class EntryInformation {
 	
 	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments, ArrayList<String> additionalPeople ){
 		
-		this.setPrimaryName(name);
+		this.primaryName = name;
 		this.address = address;
 		this.zipCode = zipCode;
 		this.phoneNumber = phoneNumber;
@@ -39,7 +39,13 @@ public class EntryInformation {
 
 	public EntryInformation(String name, String address, int zipCode, String phoneNumber, String comments){
 		
-		new EntryInformation(name, address, zipCode, phoneNumber, comments, new ArrayList<String>());
+		this.primaryName = name;
+		this.address = address;
+		this.zipCode = zipCode;
+		this.phoneNumber = phoneNumber;
+		this.comments = comments;
+		this.otherPeople = new ArrayList<String>();
+		this.otherPeople.add("");
 		
 	}
 	
