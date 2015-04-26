@@ -98,6 +98,8 @@ public static void update(EntryInformation updatedEntry){
 	
 	Datastore dstore = getDatastore();
 	
+	dstore.delete(dstore.createQuery(EntryInformation.class).filter("phoneNumber", updatedEntry.getPhoneNumber()));
+	
 	dstore.save(updatedEntry);
 	
 	closeMongo(dstore);
@@ -147,6 +149,5 @@ public static void resetEventOccurence(){
 	
 	closeMongo(dstore);
 }
-
 
 }

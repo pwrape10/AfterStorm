@@ -64,4 +64,9 @@ public class EntryInformation {
 		this.primaryName = primaryName;
 	}
 	
+	public String getPhoneNumber(){
+		
+		return this.phoneNumber;
+	}
+	
 }
